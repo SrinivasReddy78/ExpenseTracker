@@ -23,8 +23,6 @@ ChartJS.register(
 const Dashboard = () => {
   const { incomes, expenses, totalIncome, totalExpense, totalBalance, getExpenses, getIncomes, transactionHistory } = useContext(GlobalContext);
   const [...history] = transactionHistory();
-  console.log(history);
-
 
   const labels = Array.isArray(incomes) ? incomes.map((inc) => dateFormat(inc.date)) : [];
   const incomeData = Array.isArray(incomes) ? incomes.map((income) => income.amount) : [];

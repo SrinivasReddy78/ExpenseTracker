@@ -43,7 +43,7 @@ const deleteIncome = async (req, res) =>{
     try {
         const id = req.params.id;
         const income = await incomeModel.findByIdAndDelete({ _id: id, userId: req.user._id });
-        console.log(income);
+        // console.log(income);
         if(!income){
             return res.status(404).json({ message: 'Income not found' });
         }

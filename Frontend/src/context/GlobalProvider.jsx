@@ -11,14 +11,6 @@ const GlobalProvider = (props) => {
     const [error, setError] = useState('')
 
 
-    useEffect(() => {
-        console.log(incomes);
-    }, [incomes])
-
-    useEffect(() => {
-        console.log(expenses);
-    }, [expenses])
-
 
 
     const addIncome = async (income) => {
